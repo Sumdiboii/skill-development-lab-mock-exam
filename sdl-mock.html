@@ -1,0 +1,78 @@
+<!-- skill development laboratory mock practical   1 April 2025    Name: Sumedh Pimplikar    Batch: C4    PRN: 122B1B224 -->
+
+<!-- problem statement: Write Jquery statements that gather the info from the input fields, store the values into variables and perform some operations with them -->
+
+<!-- proposed solution: input 2 numbers and perform addition / multiplication operations  -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SDL MOCK</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+
+
+        $(document).ready(function()
+        {
+            $('#solve').click(function()
+            {
+                
+                var n = parseFloat($('#n').val()); //storing the value of first number in variable n
+                var m = parseFloat($('#m').val()); // storing the value of the second number in the variable m
+                
+
+                
+                if(isNaN(m) || isNaN(n))
+                 {
+                    alert("alert! Invalid numbers/number"); //the numbers must be validd
+                    return;
+                }
+                
+                var add = n + m; //logic we will use for addition
+                var mult = n * m; //logiv we will use for multiplication
+                
+
+                $('#res1').html (" Addition of the 2 nums is: " + add ); // displaying the results of addi1tion 
+                $('#res2').html(" Multiplication of the 2 nums is: " + mult ); // displaying the results of multiplication
+
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+    <div id="intro-container" style="background-color: yellow;">
+    <h3>Skill Development Laboratory Mock Practical <br>  1 April 2025  <br>  Name: Sumedh Pimplikar  <br>  Batch: C4  <br>  PRN: 122B1B224</h3><hr>
+    </div>
+
+
+    <h3>Problem Statement:<br> <h3><h4>Write Jquery statements that gather the info from the input fields, store the values into variables and perform some operations with them</h4><hr>
+    
+    <div id="logic-container" style="background-color: yellow;">
+    <h3> Addition and Multiplication by JQUERY: SDL MOCK EXAM </h3>
+
+        <label for="n"> ENTER THE FIRST NUMBER: </label>
+
+            <input type="text" id="n"><br><br>
+    
+        <label for="m"> ENTER THE SECOND NUMBER: </label>
+
+            <input type="text" id="m"><br><br>
+    
+    <button id="solve"> solve </button>
+
+        <p id="res1"></p>
+        <p id="res2"></p>
+    </div>
+    </body>
+
+</html>
